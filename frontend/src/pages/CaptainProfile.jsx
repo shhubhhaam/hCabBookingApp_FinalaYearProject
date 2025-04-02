@@ -48,7 +48,9 @@ const CaptainProfile = () => {
             {/* Navbar */}
             <div className="bg-white shadow-sm">
                 <div className="flex justify-between items-center px-6 py-3">
-                    <img className='w-16' src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Uber_logo_2018.png" alt="Uber Logo" />
+                <img className='w-16' 
+                    src="https://media-hosting.imagekit.io/deae673a49484df6/RideX_logo_captain.png?Expires=1838219093&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=tpt6CJGM1ph8tgLRLQlXOgyR32OB5-UdH25AshFCFB1zcrPTb9s1cl-6DQV9BYwWMf2nRPDWGamL-Hm7YkuourShOzP~rBMZc9T8RMxZNXa2HEut4IZbOQtq0Udedztl6ZhdnDsIKHL5HfUSeiR746vhIy4Y17myh5rpUX4IDOYHCEqZh7S48vdBYctgOdoAKMlpZZj6EfkYb5dpGW8ppDxRvtsjQlZXib-2f4ReKScry0K6NdfRIU3t99GBbXaxV1797UfR8~YoR9~WEMYwKBG7jcfVU8JKNYL-ALH73aGsH9LEoXRTw8V5Ur0o93fsq0u~b4YO45x03NWNUU2feA__" 
+                    alt="Logo" />
                     <div className="relative group">
                         <button className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center hover:bg-gray-300 transition-colors">
                             <i className="ri-user-line text-xl"></i>

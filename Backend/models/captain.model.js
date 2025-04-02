@@ -26,6 +26,16 @@ const captainSchema = new mongoose.Schema({
         required: true,
         select: false,
     },
+    phone: {
+        type: String,
+        required: true,
+        match: [/^[6-9]\d{9}$/, 'Please enter a valid Indian phone number']
+    },
+    gender: {
+        type: String,
+        required: true,
+        enum: ['male', 'female', 'other']
+    },
     socketId: {
         type: String,
     },

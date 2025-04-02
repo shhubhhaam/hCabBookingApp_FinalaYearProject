@@ -12,6 +12,11 @@ const CaptainRiding = () => {
     const location = useLocation()
     const rideData = location.state?.ride
 
+    const handleLogout = () => {
+        localStorage.removeItem('token');
+        navigate('/captain-login');
+    };
+
 
 
     useGSAP(function () {
@@ -30,11 +35,32 @@ const CaptainRiding = () => {
     return (
         <div className='h-screen relative flex flex-col justify-end'>
 
-            <div className='fixed p-6 top-0 flex items-center justify-between w-screen'>
-                <img className='w-16' src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Uber_logo_2018.png" alt="" />
-                <Link to='/captain-home' className=' h-10 w-10 bg-white flex items-center justify-center rounded-full'>
-                    <i className="text-lg font-medium ri-logout-box-r-line"></i>
-                </Link>
+            {/* Navbar */}
+            <div className="absolute top-0 left-0 right-0 z-20 bg-white shadow-sm">
+                <div className="flex justify-between items-center px-6 py-3">
+                    <img className='w-16' src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Uber_logo_2018.png" alt="Uber Logo" />
+                    <div className="relative group">
+                        <button className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center hover:bg-gray-300 transition-colors">
+                            <i className="ri-user-line text-xl"></i>
+                        </button>
+                        <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 hidden group-hover:block">
+                            <button 
+                                onClick={() => navigate('/captain-profile')}
+                                className="w-full px-4 py-2 text-left hover:bg-gray-100 flex items-center gap-2"
+                            >
+                                <i className="ri-user-line"></i>
+                                Profile
+                            </button>
+                            <button 
+                                onClick={handleLogout}
+                                className="w-full px-4 py-2 text-left hover:bg-gray-100 flex items-center gap-2"
+                            >
+                                <i className="ri-logout-box-line"></i>
+                                Logout
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div className='h-1/5 p-6 flex items-center justify-between relative bg-yellow-400 pt-10'
